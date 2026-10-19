@@ -1,0 +1,60 @@
+name: Nightly plugin sync
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # 03:17 UTC daily (off the hour to avoid scheduler congestion)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-plugins
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install dev tools
+        run: pip install --quiet pytest ruff mypy
+
+      - name: Lint, typecheck, test
+        run: |
+          ruff check tools tests
+          ruff format --check tools tests
+          mypy
+          pytest -q
+
+      - name: Sync plugins
+        run: python3 tools/sync_plugins.py
+
+      - name: Sanity check
+        run: |
+          count=$(python3 -c "import json; print(len(json.load(open('skills/catalog.json'))))")
+          echo "catalogued plugins: $count"
+          test "$count" -gt 0
+
+      - name: Commit changes
+        run: |
+          git add -A skills .claude-plugin
+          if git diff --cached --quiet; then
+            echo "No upstream changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898599+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(skills): nightly sync $(date -u +%F)" -m "$(git diff --cached --stat | tail -1)"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Summary
+        if: always()
+        run: |
+          if [ -f skills/README.md ]; then cat skills/README.md >> "$GITHUB_STEP_SUMMARY"; fi

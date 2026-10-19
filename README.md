@@ -16,6 +16,9 @@ python3 tools/sync_plugins.py                 # all sections, regenerates skills
 python3 tools/sync_plugins.py --section code  # subset (still regenerates skills/)
 ```
 
+CI runs this nightly at 03:17 UTC (`.github/workflows/sync-plugins.yml`) and commits any upstream changes to `main`;
+trigger it manually from the Actions tab (**Nightly plugin sync → Run workflow**).
+
 Requires Python ≥ 3.12 and `git`; no third-party packages. Dev checks: `pytest`, `ruff check`, `mypy`.
 
 ## Selection rules
