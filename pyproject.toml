@@ -1,0 +1,30 @@
+[project]
+name = "claude-skills-store"
+version = "0.1.0"
+description = "Mirror of Anthropic-authored Claude plugins with license and component inventory."
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.15", "mypy>=1.15"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["skills"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF", "PL", "PTH", "TC", "FURB", "PERF", "S", "ANN"]
+ignore = ["S603", "S607", "PLR2004", "PLR0913", "ANN401"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "ANN"]
+
+[tool.mypy]
+strict = true
+python_version = "3.12"
+files = ["tools", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tools"]
