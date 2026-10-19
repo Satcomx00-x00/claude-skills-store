@@ -1,0 +1,1304 @@
+[
+  {
+    "name": "agent-sdk-dev",
+    "section": "code",
+    "version": null,
+    "description": "Development kit for working with the Claude Agent SDK",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/agent-sdk-dev"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 1,
+      "agents": 2,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/agent-sdk-dev"
+  },
+  {
+    "name": "clangd-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "C/C++ language server (clangd) for code intelligence",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/clangd-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/clangd-lsp"
+  },
+  {
+    "name": "claude-code-setup",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Analyze codebases and recommend tailored Claude Code automations such as hooks, skills, MCP servers, and subagents.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/claude-code-setup"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/claude-code-setup"
+  },
+  {
+    "name": "claude-md-management",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Tools to maintain and improve CLAUDE.md files - audit quality, capture session learnings, and keep project memory current.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/claude-md-management"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 1,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/claude-md-management"
+  },
+  {
+    "name": "code-modernization",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Guided modernization for any legacy codebase: start with /modernize, get an assessment, an interactive map, the business rules mined from the code, and a plan you approve, then an upgrade, a rewrite or a rebuild with independent proof that the new code behaves like the old. Includes security hardening, a one-page report, specialist agents, and an optional live progress pane (early access).",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/code-modernization"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 13,
+      "agents": 8,
+      "hooks": 6,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      },
+      {
+        "spdx": "MIT",
+        "path": "assets/vendor/LICENSE-mermaid.txt"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/code-modernization"
+  },
+  {
+    "name": "code-review",
+    "section": "code",
+    "version": null,
+    "description": "Automated code review for pull requests using multiple specialized agents with confidence-based scoring to filter false positives",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/code-review"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 1,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/code-review"
+  },
+  {
+    "name": "code-simplifier",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Agent that simplifies and refines code for clarity, consistency, and maintainability while preserving functionality. Focuses on recently modified code.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/code-simplifier"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 1,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/code-simplifier"
+  },
+  {
+    "name": "commit-commands",
+    "section": "code",
+    "version": null,
+    "description": "Commands for git commit workflows including commit, push, and PR creation",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/commit-commands"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 3,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/commit-commands"
+  },
+  {
+    "name": "csharp-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "C# language server for code intelligence",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/csharp-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/csharp-lsp"
+  },
+  {
+    "name": "cwc-makers",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Onboard a Code-with-Claude Makers Cardputer with one /maker-setup command \u2014 clones the build-with-claude repo, flashes UIFlow firmware, and installs the Claude Buddy app bundle.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/cwc-makers"
+    },
+    "components": {
+      "skills": 2,
+      "commands": 1,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/cwc-makers"
+  },
+  {
+    "name": "explanatory-output-style",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Adds educational insights about implementation choices and codebase patterns (mimics the deprecated Explanatory output style)",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/explanatory-output-style"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 1,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/explanatory-output-style"
+  },
+  {
+    "name": "feature-dev",
+    "section": "code",
+    "version": null,
+    "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/feature-dev"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 1,
+      "agents": 3,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/feature-dev"
+  },
+  {
+    "name": "frontend-design",
+    "section": "code",
+    "version": null,
+    "description": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/frontend-design"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      },
+      {
+        "spdx": "Apache-2.0",
+        "path": "skills/frontend-design/LICENSE.txt"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/frontend-design"
+  },
+  {
+    "name": "gopls-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Go language server for code intelligence and refactoring",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/gopls-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/gopls-lsp"
+  },
+  {
+    "name": "hookify",
+    "section": "code",
+    "version": null,
+    "description": "Easily create custom hooks to prevent unwanted behaviors by analyzing conversation patterns or from explicit instructions. Define rules via simple markdown files.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/hookify"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 4,
+      "agents": 1,
+      "hooks": 4,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/hookify"
+  },
+  {
+    "name": "jdtls-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Java language server (Eclipse JDT.LS) for code intelligence",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/jdtls-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/jdtls-lsp"
+  },
+  {
+    "name": "kotlin-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Kotlin language server for code intelligence",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/kotlin-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/kotlin-lsp"
+  },
+  {
+    "name": "learning-output-style",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Interactive learning mode that requests meaningful code contributions at decision points (mimics the unshipped Learning output style)",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/learning-output-style"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 1,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/learning-output-style"
+  },
+  {
+    "name": "lua-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Lua language server for code intelligence",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/lua-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/lua-lsp"
+  },
+  {
+    "name": "math-olympiad",
+    "section": "code",
+    "version": null,
+    "description": "Solve competition math (IMO, Putnam, USAMO) with adversarial verification that catches what self-verification misses. Fresh-context verifiers attack proofs with specific failure patterns. Calibrated abstention over bluffing.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/math-olympiad"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/math-olympiad"
+  },
+  {
+    "name": "math-proof",
+    "section": "code",
+    "version": null,
+    "description": "Two skills for hard mathematics problems, each ending in a self-contained proof.md: /math-proof:solo has the session work the problem itself in stages with a notes file; /math-proof:siege works on it for hours in rounds of judge and worker sub-agents and says plainly what is and is not proved.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/math-proof"
+    },
+    "components": {
+      "skills": 2,
+      "commands": 0,
+      "agents": 3,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/math-proof"
+  },
+  {
+    "name": "mcp-apps",
+    "section": "code",
+    "version": "0.1.0",
+    "description": "Skills for creating MCP Apps with the MCP Apps SDK",
+    "author": "Anthropic / Model Context Protocol",
+    "upstream": {
+      "url": "https://github.com/modelcontextprotocol/ext-apps.git",
+      "sha": "6d9bdc7babf275b759225aa722cbf5510c4c6021",
+      "path": "plugins/mcp-apps"
+    },
+    "components": {
+      "skills": 4,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "MIT",
+    "license_files": [
+      {
+        "spdx": "MIT",
+        "path": "plugin.json#license"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/mcp-apps"
+  },
+  {
+    "name": "mcp-server-dev",
+    "section": "code",
+    "version": null,
+    "description": "Skills for designing and building MCP servers that work seamlessly with Claude. Guides you through deployment models (remote HTTP, MCPB, local), tool design patterns, auth, and interactive MCP apps.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/mcp-server-dev"
+    },
+    "components": {
+      "skills": 3,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/mcp-server-dev"
+  },
+  {
+    "name": "mcp-tunnels",
+    "section": "code",
+    "version": null,
+    "description": "Connect Claude to a private MCP server through an Anthropic MCP tunnel. The /create-docker-mcp-tunnel command drives the Docker Compose quickstart end to end: certificates, proxy config, cloudflared, and a verifiable sample server.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/mcp-tunnels"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 1,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/mcp-tunnels"
+  },
+  {
+    "name": "php-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "PHP language server (Intelephense) for code intelligence",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/php-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/php-lsp"
+  },
+  {
+    "name": "playground",
+    "section": "code",
+    "version": null,
+    "description": "Creates interactive HTML playgrounds \u2014 self-contained single-file explorers with visual controls, live preview, and prompt output with copy button. Includes templates for design playgrounds, data explorers, concept maps, and document critique.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/playground"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/playground"
+  },
+  {
+    "name": "plugin-dev",
+    "section": "code",
+    "version": null,
+    "description": "Comprehensive toolkit for developing Claude Code plugins. Includes 7 expert skills covering hooks, MCP integration, commands, agents, and best practices. AI-assisted plugin creation and validation.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/plugin-dev"
+    },
+    "components": {
+      "skills": 7,
+      "commands": 1,
+      "agents": 3,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/plugin-dev"
+  },
+  {
+    "name": "pr-review-toolkit",
+    "section": "code",
+    "version": null,
+    "description": "Comprehensive PR review agents specializing in comments, tests, error handling, type design, code quality, and code simplification",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/pr-review-toolkit"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 1,
+      "agents": 6,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/pr-review-toolkit"
+  },
+  {
+    "name": "project-artifact",
+    "section": "code",
+    "version": null,
+    "description": "Generate and publish a living project status page \u2014 overview & success criteria, the workstream sequence, and next steps \u2014 as a shareable claude.ai artifact backed by a per-project config, so refreshes re-gather live state, redeploy the same URL, and report only the delta.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/project-artifact"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/project-artifact"
+  },
+  {
+    "name": "pyright-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Python language server (Pyright) for type checking and code intelligence",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/pyright-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/pyright-lsp"
+  },
+  {
+    "name": "ralph-loop",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Interactive self-referential AI loops for iterative development, implementing the Ralph Wiggum technique. Claude works on the same task repeatedly, seeing its previous work, until completion.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/ralph-loop"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 3,
+      "agents": 0,
+      "hooks": 1,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/ralph-loop"
+  },
+  {
+    "name": "receipts",
+    "section": "code",
+    "version": null,
+    "description": "A personal Claude Code impact report for justifying your usage to a manager or a self-review: what you shipped, which projects it went to, and each project's share of your usage. Reads your ~/.claude/projects transcripts and runs read-only git locally; only counts and project names are sent to write it up, and the report stays on your machine.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/receipts"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/receipts"
+  },
+  {
+    "name": "ruby-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Ruby language server for code intelligence and analysis",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/ruby-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/ruby-lsp"
+  },
+  {
+    "name": "rust-analyzer-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Rust language server for code intelligence and analysis",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/rust-analyzer-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/rust-analyzer-lsp"
+  },
+  {
+    "name": "security-guidance",
+    "section": "code",
+    "version": "2.0.14",
+    "description": "Security review for Claude-generated code. Pattern-based warnings on edits, LLM-powered diff review on Stop, and an agentic commit reviewer that catches injection, XSS, SSRF, hardcoded secrets, and 25+ other vulnerability classes.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/security-guidance"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 7,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/security-guidance"
+  },
+  {
+    "name": "session-report",
+    "section": "code",
+    "version": null,
+    "description": "Generate an explorable HTML report of Claude Code session usage \u2014 tokens, cache efficiency, subagents, skills, and the most expensive prompts \u2014 from local ~/.claude/projects transcripts.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/session-report"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/session-report"
+  },
+  {
+    "name": "skill-creator",
+    "section": "code",
+    "version": null,
+    "description": "Create new skills, improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, update or optimize an existing skill, run evals to test a skill, or benchmark skill performance with variance analysis.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/skill-creator"
+    },
+    "components": {
+      "skills": 1,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      },
+      {
+        "spdx": "Apache-2.0",
+        "path": "skills/skill-creator/LICENSE.txt"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/skill-creator"
+  },
+  {
+    "name": "swift-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "Swift language server (SourceKit-LSP) for code intelligence",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/swift-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/swift-lsp"
+  },
+  {
+    "name": "typescript-lsp",
+    "section": "code",
+    "version": "1.0.0",
+    "description": "TypeScript/JavaScript language server for enhanced code intelligence",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
+      "path": "plugins/typescript-lsp"
+    },
+    "components": {
+      "skills": 0,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 0,
+      "lsp_servers": 1
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "code/typescript-lsp"
+  },
+  {
+    "name": "design",
+    "section": "design",
+    "version": "1.2.0",
+    "description": "Accelerate design workflows \u2014 critique, design system management, UX writing, accessibility audits, research synthesis, and dev handoff. From exploration to pixel-perfect specs.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "sha": "33eeda1e8fd856455b05479d13a0f85b5f803744",
+      "path": "design"
+    },
+    "components": {
+      "skills": 7,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 9,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "<repo>/LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "design/design"
+  },
+  {
+    "name": "engineering",
+    "section": "engineering",
+    "version": "1.2.0",
+    "description": "Streamline engineering workflows \u2014 standups, code review, architecture decisions, incident response, and technical documentation. Works with your existing tools or standalone.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "sha": "33eeda1e8fd856455b05479d13a0f85b5f803744",
+      "path": "engineering"
+    },
+    "components": {
+      "skills": 10,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 10,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "<repo>/LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "engineering/engineering"
+  },
+  {
+    "name": "operations",
+    "section": "operations",
+    "version": "1.3.0",
+    "description": "Optimize business operations \u2014 vendor management, process documentation, change management, capacity planning, and compliance tracking. Keep your organization running efficiently.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "sha": "33eeda1e8fd856455b05479d13a0f85b5f803744",
+      "path": "operations"
+    },
+    "components": {
+      "skills": 9,
+      "commands": 0,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 6,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "<repo>/LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "operations/operations"
+  },
+  {
+    "name": "product-management",
+    "section": "product-management",
+    "version": "1.2.0",
+    "description": "Write feature specs, plan roadmaps, and synthesize user research faster. Keep stakeholders updated and stay ahead of the competitive landscape.",
+    "author": "Anthropic",
+    "upstream": {
+      "url": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "sha": "33eeda1e8fd856455b05479d13a0f85b5f803744",
+      "path": "product-management"
+    },
+    "components": {
+      "skills": 8,
+      "commands": 1,
+      "agents": 0,
+      "hooks": 0,
+      "mcp_servers": 16,
+      "lsp_servers": 0
+    },
+    "license": "Apache-2.0",
+    "license_files": [
+      {
+        "spdx": "Apache-2.0",
+        "path": "LICENSE"
+      }
+    ],
+    "redistributable": true,
+    "flags": [],
+    "stored_path": "product-management/product-management"
+  }
+]

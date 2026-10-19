@@ -1,0 +1,6 @@
+# Plugins skipped by tools/sync_plugins.py: never downloaded, never mirrored.
+# One plugin name per line; text after `#` is the reason shown in skills/README.md.
+# Plugins with a non-redistributable license that are NOT listed here are still
+# downloaded for inspection, then flagged and left out — add them here to skip the download.
+
+claude-security  # Proprietary Anthropic license: "you may not distribute, publish… or make available to any third party"
