@@ -13,6 +13,7 @@ from sync_plugins import (
     inspect_components,
     inspect_license,
     is_anthropic,
+    load_excludes,
     worth_fetching,
 )
 
@@ -97,3 +98,14 @@ def test_is_anthropic_by_email() -> None:
 
 def test_sections_match_directory() -> None:
     assert {s.value for s in Section} == {"code", "design", "engineering", "operations", "product-management"}
+
+
+def test_load_excludes(tmp_path: Path) -> None:
+    f = tmp_path / "excludes.txt"
+    f.write_text("# header comment\n\nclaude-security  # proprietary\nfoo\n")
+
+    assert load_excludes(f) == {"claude-security": "proprietary", "foo": ""}
+
+
+def test_load_excludes_missing_file(tmp_path: Path) -> None:
+    assert load_excludes(tmp_path / "nope.txt") == {}

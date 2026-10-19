@@ -25,7 +25,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any, Final
 
 if TYPE_CHECKING:
-    from collections.abc import Callable, Iterable, Iterator, Mapping
+    from collections.abc import Callable, Iterable, Iterator, Mapping, Sequence
 
 type Json = dict[str, Any]
 
@@ -36,6 +36,7 @@ GITHUB: Final = "https://github.com"
 ANTHROPIC_ORGS: Final = frozenset({"anthropics", "modelcontextprotocol"})
 IGNORED_NAMES: Final = frozenset({".git", "__pycache__", ".DS_Store", "node_modules"})
 LICENSE_GLOBS: Final = ("LICENSE*", "LICENCE*", "COPYING*")
+EXCLUDE_FILE: Final = "plugin-excludes.txt"
 
 
 # ── Catalog configuration ────────────────────────────────────────────────────
@@ -249,11 +250,23 @@ def inspect_components(root: Path, manifest: Json) -> Components:
 # ── Git retrieval ────────────────────────────────────────────────────────────
 
 
+def _git(*args: str) -> str:
+    return subprocess.run(["git", *args], check=True, capture_output=True, text=True).stdout
+
+
 @dataclass(frozen=True, slots=True)
 class Checkout:
+    """Blobless, sparse checkout: only root files and paths passed to ``include`` are ever downloaded."""
+
     url: str
     sha: str
     path: Path
+
+    def include(self, subdir: str) -> None:
+        if subdir in {"", "."}:
+            _git("-C", str(self.path), "sparse-checkout", "disable")
+        else:
+            _git("-C", str(self.path), "sparse-checkout", "add", subdir)
 
 
 @dataclass(slots=True)
@@ -266,19 +279,16 @@ class GitCache:
             return hit
         dest = self.workdir / f"{len(self._checkouts):02d}-{Path(url).stem}"
         log.info("fetching %s @ %s", url, rev)
-        self._git("init", "--quiet", str(dest))
-        self._git("-C", str(dest), "fetch", "--quiet", "--depth", "1", url, rev)
-        self._git("-C", str(dest), "-c", "advice.detachedHead=false", "checkout", "--quiet", "FETCH_HEAD")
-        sha = self._git("-C", str(dest), "rev-parse", "HEAD").strip()
+        _git("init", "--quiet", str(dest))
+        _git("-C", str(dest), "fetch", "--quiet", "--depth", "1", "--filter=blob:none", url, rev)
+        _git("-C", str(dest), "sparse-checkout", "set", "--cone", ".claude-plugin")
+        _git("-C", str(dest), "-c", "advice.detachedHead=false", "checkout", "--quiet", "FETCH_HEAD")
+        sha = _git("-C", str(dest), "rev-parse", "HEAD").strip()
         return self._checkouts.setdefault((url, rev), Checkout(url, sha, dest))
 
     @property
     def checkouts(self) -> tuple[Checkout, ...]:
         return tuple(self._checkouts.values())
-
-    @staticmethod
-    def _git(*args: str) -> str:
-        return subprocess.run(["git", *args], check=True, capture_output=True, text=True).stdout
 
 
 @dataclass(frozen=True, slots=True)
@@ -383,17 +393,47 @@ def worth_fetching(entry: Json) -> bool:
             return False
 
 
-def collect(sections: frozenset[Section], git: GitCache) -> list[Plugin]:
+@dataclass(frozen=True, slots=True)
+class Excluded:
+    name: str
+    section: Section
+    reason: str
+
+
+def load_excludes(path: Path) -> dict[str, str]:
+    """Parse ``name  # reason`` lines; blank lines and full-line comments are ignored."""
+    if not path.is_file():
+        return {}
+    excludes: dict[str, str] = {}
+    for line in path.read_text().splitlines():
+        name, _, reason = line.partition("#")
+        if name := name.strip():
+            excludes[name] = reason.strip()
+    return excludes
+
+
+def collect(
+    sections: frozenset[Section], git: GitCache, excludes: Mapping[str, str]
+) -> tuple[list[Plugin], list[Excluded]]:
     plugins: dict[str, Plugin] = {}
+    excluded: dict[str, Excluded] = {}
     for mp in MARKETPLACES:
         home = git.get(mp.url)
         catalog = _load_json(home.path / ".claude-plugin" / "marketplace.json")
         for entry in catalog.get("plugins", []):
             name = entry.get("name", "")
             section = mp.section_of(entry)
-            if name in plugins or section not in sections or not worth_fetching(entry):
+            if name in plugins or name in excluded or section not in sections or not worth_fetching(entry):
                 continue
-            if (up := resolve_source(entry.get("source"), home, git)) is None or not up.path.is_dir():
+            if name in excludes:
+                log.info("excluded (not downloaded): %s — %s", name, excludes[name] or "no reason given")
+                excluded[name] = Excluded(name, section, excludes[name])
+                continue
+            if (up := resolve_source(entry.get("source"), home, git)) is None:
+                log.warning("skip %s: unsupported source %r", name, entry.get("source"))
+                continue
+            up.checkout.include(up.subdir)
+            if not up.path.is_dir():
                 log.warning("skip %s: unsupported or missing source %r", name, entry.get("source"))
                 continue
             manifest = _load_json(up.path / ".claude-plugin" / "plugin.json")
@@ -414,7 +454,10 @@ def collect(sections: frozenset[Section], git: GitCache) -> list[Plugin]:
                 entry=entry,
                 source_dir=up.path,
             )
-    return sorted(plugins.values(), key=lambda p: (p.section, p.name))
+    return (
+        sorted(plugins.values(), key=lambda p: (p.section, p.name)),
+        sorted(excluded.values(), key=lambda e: (e.section, e.name)),
+    )
 
 
 # ── Output ───────────────────────────────────────────────────────────────────
@@ -444,7 +487,7 @@ def _cell(value: object) -> str:
     return str(value).replace("|", "\\|").replace("\n", " ")
 
 
-def render_readme(plugins: list[Plugin]) -> str:
+def render_readme(plugins: list[Plugin], excluded: Sequence[Excluded] = ()) -> str:
     cols = (
         "Section",
         "Plugin",
@@ -495,6 +538,10 @@ def render_readme(plugins: list[Plugin]) -> str:
                 or ["None."]
             ),
             "",
+            f"## 🚫 Excluded by `{EXCLUDE_FILE}` (never downloaded)",
+            "",
+            *([f"- **{e.name}** ({e.section}): {e.reason or 'no reason given'}" for e in excluded] or ["None."]),
+            "",
         ]
     )
 
@@ -504,7 +551,9 @@ def marketplace_entry(plugin: Plugin, out_rel: str) -> Json:
     return {**entry, "source": f"./{out_rel}/{plugin.stored_path}"}
 
 
-def write_outputs(plugins: list[Plugin], out: Path, repo_licenses: Mapping[str, Path | None]) -> None:
+def write_outputs(
+    plugins: list[Plugin], excluded: list[Excluded], out: Path, repo_licenses: Mapping[str, Path | None]
+) -> None:
     staging = Path(tempfile.mkdtemp(prefix=".skills-", dir=out.parent))
     try:
         for p in plugins:
@@ -513,7 +562,7 @@ def write_outputs(plugins: list[Plugin], out: Path, repo_licenses: Mapping[str, 
             else:
                 log.warning("NOT mirrored (license): %s — %s", p.name, "; ".join(p.license.flags))
         (staging / "catalog.json").write_text(json.dumps([p.to_json() for p in plugins], indent=2) + "\n")
-        (staging / "README.md").write_text(render_readme(plugins))
+        (staging / "README.md").write_text(render_readme(plugins, excluded))
         if out.exists():
             shutil.rmtree(out)
         staging.rename(out)
@@ -542,6 +591,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--out", type=Path, default=REPO_ROOT / "skills", help="output directory (fully regenerated)")
     ap.add_argument("--section", type=Section, choices=list(Section), action="append", help="limit to section(s)")
+    ap.add_argument(
+        "--exclude-file",
+        type=Path,
+        default=REPO_ROOT / EXCLUDE_FILE,
+        help="plugin names to skip without downloading, one per line (`name  # reason`)",
+    )
     ap.add_argument("--cache", type=Path, help="keep git checkouts in this directory instead of a temp dir")
     ap.add_argument("-v", "--verbose", action="store_true")
     return ap.parse_args(argv)
@@ -557,15 +612,22 @@ def main(argv: list[str] | None = None) -> int:
         workdir = args.cache.resolve() if args.cache else Path(tmp)
         workdir.mkdir(parents=True, exist_ok=True)
         git = GitCache(workdir)
-        plugins = collect(sections, git)
+        plugins, excluded = collect(sections, git, load_excludes(args.exclude_file))
         repo_licenses = {
             c.url: next((p for g in LICENSE_GLOBS for p in sorted(c.path.glob(g)) if p.is_file()), None)
             for c in git.checkouts
         }
-        write_outputs(plugins, out, repo_licenses)
+        write_outputs(plugins, excluded, out, repo_licenses)
 
     flagged = sum(not p.license.redistributable for p in plugins)
-    log.info("mirrored %d/%d plugins into %s (%d flagged)", len(plugins) - flagged, len(plugins), out, flagged)
+    log.info(
+        "mirrored %d/%d plugins into %s (%d flagged, %d excluded)",
+        len(plugins) - flagged,
+        len(plugins),
+        out,
+        flagged,
+        len(excluded),
+    )
     return 0
 
 

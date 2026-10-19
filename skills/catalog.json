@@ -120,38 +120,6 @@
     "stored_path": "code/claude-md-management"
   },
   {
-    "name": "claude-security",
-    "section": "code",
-    "version": "0.12.0",
-    "description": "Deep vulnerability scanning of your own code, run entirely inside your Claude Code session at a chosen effort tier, with every finding challenged before it is reported and the verification tally computed in code. Turns surviving findings into targeted patches, each verified by a panel of agents, that you apply when you choose.",
-    "author": "Anthropic",
-    "upstream": {
-      "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "ea10b213686c90bb1984b2016937310e05336cf3",
-      "path": "plugins/claude-security"
-    },
-    "components": {
-      "skills": 1,
-      "commands": 0,
-      "agents": 9,
-      "hooks": 6,
-      "mcp_servers": 0,
-      "lsp_servers": 0
-    },
-    "license": "LicenseRef-Proprietary",
-    "license_files": [
-      {
-        "spdx": "LicenseRef-Proprietary",
-        "path": "LICENSE"
-      }
-    ],
-    "redistributable": false,
-    "flags": [
-      "LICENSE: LicenseRef-Proprietary does not permit redistribution"
-    ],
-    "stored_path": null
-  },
-  {
     "name": "code-modernization",
     "section": "code",
     "version": "1.0.0",

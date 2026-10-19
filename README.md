@@ -41,6 +41,15 @@ then `plugin.json#license`, then the upstream repo root. Anything not in the all
 only its metadata is kept. When a plugin inherits its license from the repo root, that `LICENSE` is
 copied into the mirrored plugin (Apache-2.0 §4(a)).
 
-Currently flagged: **`claude-security`** — proprietary Anthropic license ("you may not distribute,
+### Exclude list
+
+[`plugin-excludes.txt`](plugin-excludes.txt) names plugins to skip entirely — they are **never downloaded**
+(checkouts are blobless + sparse, so only the paths of included plugins are fetched). One name per line,
+`# reason` optional; reasons appear in `skills/README.md`. Use `--exclude-file PATH` to point elsewhere.
+
+Currently excluded: **`claude-security`** — proprietary Anthropic license ("you may not distribute,
 publish… or otherwise make the Plugin… available to any third party"). Install it from the official
 marketplace instead.
+
+The license check remains a safety net: a new restrictive plugin that is not yet listed is downloaded
+for inspection, flagged and left out — add it to the exclude list to stop the download.
