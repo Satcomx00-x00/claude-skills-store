@@ -2,12 +2,12 @@
   {
     "name": "agent-sdk-dev",
     "section": "code",
-    "version": null,
+    "version": "1.0.1",
     "description": "Development kit for working with the Claude Agent SDK",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/agent-sdk-dev"
     },
     "components": {
@@ -37,7 +37,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/clangd-lsp"
     },
     "components": {
@@ -67,7 +67,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/claude-code-setup"
     },
     "components": {
@@ -97,7 +97,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/claude-md-management"
     },
     "components": {
@@ -127,7 +127,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/code-modernization"
     },
     "components": {
@@ -156,12 +156,12 @@
   {
     "name": "code-review",
     "section": "code",
-    "version": null,
+    "version": "1.0.1",
     "description": "Automated code review for pull requests using multiple specialized agents with confidence-based scoring to filter false positives",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/code-review"
     },
     "components": {
@@ -191,7 +191,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/code-simplifier"
     },
     "components": {
@@ -216,12 +216,12 @@
   {
     "name": "commit-commands",
     "section": "code",
-    "version": null,
+    "version": "1.0.1",
     "description": "Commands for git commit workflows including commit, push, and PR creation",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/commit-commands"
     },
     "components": {
@@ -251,7 +251,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/csharp-lsp"
     },
     "components": {
@@ -281,7 +281,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/cwc-makers"
     },
     "components": {
@@ -306,12 +306,12 @@
   {
     "name": "explanatory-output-style",
     "section": "code",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Adds educational insights about implementation choices and codebase patterns (mimics the deprecated Explanatory output style)",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/explanatory-output-style"
     },
     "components": {
@@ -336,12 +336,12 @@
   {
     "name": "feature-dev",
     "section": "code",
-    "version": null,
+    "version": "1.0.1",
     "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/feature-dev"
     },
     "components": {
@@ -366,12 +366,12 @@
   {
     "name": "frontend-design",
     "section": "code",
-    "version": null,
+    "version": "1.1.1",
     "description": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics.",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/frontend-design"
     },
     "components": {
@@ -405,7 +405,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/gopls-lsp"
     },
     "components": {
@@ -430,12 +430,12 @@
   {
     "name": "hookify",
     "section": "code",
-    "version": null,
+    "version": "0.1.1",
     "description": "Easily create custom hooks to prevent unwanted behaviors by analyzing conversation patterns or from explicit instructions. Define rules via simple markdown files.",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/hookify"
     },
     "components": {
@@ -465,7 +465,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/jdtls-lsp"
     },
     "components": {
@@ -495,7 +495,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/kotlin-lsp"
     },
     "components": {
@@ -520,12 +520,12 @@
   {
     "name": "learning-output-style",
     "section": "code",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Interactive learning mode that requests meaningful code contributions at decision points (mimics the unshipped Learning output style)",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/learning-output-style"
     },
     "components": {
@@ -555,7 +555,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/lua-lsp"
     },
     "components": {
@@ -585,7 +585,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/math-olympiad"
     },
     "components": {
@@ -615,7 +615,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/math-proof"
     },
     "components": {
@@ -675,7 +675,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/mcp-server-dev"
     },
     "components": {
@@ -705,7 +705,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/mcp-tunnels"
     },
     "components": {
@@ -735,7 +735,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/php-lsp"
     },
     "components": {
@@ -765,7 +765,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/playground"
     },
     "components": {
@@ -790,12 +790,12 @@
   {
     "name": "plugin-dev",
     "section": "code",
-    "version": null,
+    "version": "0.1.1",
     "description": "Comprehensive toolkit for developing Claude Code plugins. Includes 7 expert skills covering hooks, MCP integration, commands, agents, and best practices. AI-assisted plugin creation and validation.",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/plugin-dev"
     },
     "components": {
@@ -820,12 +820,12 @@
   {
     "name": "pr-review-toolkit",
     "section": "code",
-    "version": null,
+    "version": "1.0.1",
     "description": "Comprehensive PR review agents specializing in comments, tests, error handling, type design, code quality, and code simplification",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/pr-review-toolkit"
     },
     "components": {
@@ -855,7 +855,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/project-artifact"
     },
     "components": {
@@ -885,7 +885,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/pyright-lsp"
     },
     "components": {
@@ -910,12 +910,12 @@
   {
     "name": "ralph-loop",
     "section": "code",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Interactive self-referential AI loops for iterative development, implementing the Ralph Wiggum technique. Claude works on the same task repeatedly, seeing its previous work, until completion.",
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/ralph-loop"
     },
     "components": {
@@ -945,7 +945,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/receipts"
     },
     "components": {
@@ -975,7 +975,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/ruby-lsp"
     },
     "components": {
@@ -1005,7 +1005,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/rust-analyzer-lsp"
     },
     "components": {
@@ -1035,7 +1035,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/security-guidance"
     },
     "components": {
@@ -1065,7 +1065,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/session-report"
     },
     "components": {
@@ -1095,7 +1095,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/skill-creator"
     },
     "components": {
@@ -1129,7 +1129,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/swift-lsp"
     },
     "components": {
@@ -1159,7 +1159,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/claude-plugins-official.git",
-      "sha": "41f619d61b999adec1a1c8deb97d1a5b6ac35bb6",
+      "sha": "f8c5e7a1dcb71b10cb74586224b5401f3de5db28",
       "path": "plugins/typescript-lsp"
     },
     "components": {
@@ -1189,7 +1189,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/knowledge-work-plugins.git",
-      "sha": "c75fda00ff0e41c8ee331ae312c8a07f1967653b",
+      "sha": "2574e29377c7173d0cecffef29a6ecbd7f8ccb5d",
       "path": "design"
     },
     "components": {
@@ -1219,7 +1219,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/knowledge-work-plugins.git",
-      "sha": "c75fda00ff0e41c8ee331ae312c8a07f1967653b",
+      "sha": "2574e29377c7173d0cecffef29a6ecbd7f8ccb5d",
       "path": "engineering"
     },
     "components": {
@@ -1249,7 +1249,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/knowledge-work-plugins.git",
-      "sha": "c75fda00ff0e41c8ee331ae312c8a07f1967653b",
+      "sha": "2574e29377c7173d0cecffef29a6ecbd7f8ccb5d",
       "path": "operations"
     },
     "components": {
@@ -1279,7 +1279,7 @@
     "author": "Anthropic",
     "upstream": {
       "url": "https://github.com/anthropics/knowledge-work-plugins.git",
-      "sha": "c75fda00ff0e41c8ee331ae312c8a07f1967653b",
+      "sha": "2574e29377c7173d0cecffef29a6ecbd7f8ccb5d",
       "path": "product-management"
     },
     "components": {
