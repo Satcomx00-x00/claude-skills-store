@@ -18,6 +18,17 @@
       "source": "./skills/code/agent-sdk-dev"
     },
     {
+      "name": "champion-kit",
+      "description": "Help Claude Code champions run hackathons and office hours, find patterns worth sharing, help teammates climb the steps of AI adoption, and write a shareable AI maturity report.",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "category": "productivity",
+      "homepage": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/champion-kit",
+      "source": "./skills/code/champion-kit"
+    },
+    {
       "name": "clangd-lsp",
       "description": "C/C++ language server (clangd) for code intelligence",
       "version": "1.0.0",
